@@ -2,7 +2,7 @@
     <head>
         <style>
             #container {
-                width: 750px;
+                width: 1100px;
             }
             .image {
                 width: 100px;
@@ -35,7 +35,7 @@
                     'DSCN2456.JPG',
                     'DSCN2457.JPG',
                     'DSCN2476.JPG',
-                    'DSCN2477.JPG',
+                    
                     'DSCN2478.JPG',
                     'DSCN2479.JPG',
                     'DSCN2480.JPG',
@@ -49,7 +49,7 @@
                     'DSCN2493.JPG',
                     'DSCN2494.JPG',
                     'DSCN2495.JPG',
-                    'DSCN2496.JPG',
+                    
                     'DSCN2497.JPG',
                     'DSCN2498.JPG',
                     'DSCN2499.JPG',
@@ -78,18 +78,17 @@
                     'DSCN2557.JPG',
                     'DSCN2558.JPG',
                     'DSCN2560.JPG',
-                    'DSCN2564.JPG',
-                    'DSCN2565.JPG',
+                    
+                    
                     'DSCN2566.JPG',
                     'DSCN2567.JPG',
                     'DSCN2569.JPG',
                     'DSCN2570.JPG',
                     'DSCN2571.JPG',
                     'DSCN2572.JPG',
-                    'DSCN2573.JPG',
-                    'DSCN2574.JPG',
-                    'DSCN2575.JPG',
-                    'DSCN2576.JPG',
+                    
+                    'DSCN2575.JPG', //
+                    'DSCN2576.JPG', //
                     'DSCN2577.JPG',
                     'DSCN2578.JPG',
                     'DSCN2579.JPG',
@@ -105,17 +104,16 @@
                     'DSCN2597.JPG',
                     'DSCN2600.JPG',
                     'DSCN2601.JPG',
-                    'DSCN2602.JPG',
-                    'DSCN2603.JPG',
+                    
                     'DSCN2607.JPG',
                     'DSCN2608.JPG',
                     'DSCN2609.JPG',
-                    'DSCN2610.JPG',
+                    
                     'DSCN2611.JPG',
                     'DSCN2613.JPG',
                     'DSCN2614.JPG',
                     'DSCN2625.JPG',
-                    'DSCN2626.JPG',
+                    
                     'DSCN2627.JPG',
                     'DSCN2628.JPG',
                     'DSCN2629.JPG',
@@ -129,6 +127,8 @@
                     'DSCN2639.JPG',
                 ];
 
+                images = shuffle(images);
+
                 var i;
                 var result = [];
                 for (i = 0; i < images.length; i++) { 
@@ -137,6 +137,14 @@
 
                 document.getElementById('container').innerHTML = result.join('');
             };
+
+            function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}
         </script>
     </head>
     <body>
